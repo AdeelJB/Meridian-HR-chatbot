@@ -51,7 +51,16 @@ def pick_sections(question):
 
 
 # ---------------------------------------------------------------- TODO 1: the reusable prompt
-PROMPT_TEMPLATE = """You are an HR assistant. Answer this question: {{question}}"""
+PROMPT_TEMPLATE = """You are an expert HR assistant for Meridian logistics. get the the question: {{question}} from the user
+Please repond back with the {{policy_version}}  and  {{policy_text}} 
+HOW TO ANSWER
+find the section relevant to the question 
+Answer in plain language 
+Answer in 3 lines or fewer
+Donot make anything up if not found in the policy
+
+
+"""
 # TODO 1: rewrite PROMPT_TEMPLATE using the Lab 1 instructions and these three placeholders:
 #   {{policy_version}}  {{policy_text}}  {{question}}
 # It must tell the model to answer only from the policy text and to return the five JSON fields.
